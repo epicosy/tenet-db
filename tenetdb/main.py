@@ -1,11 +1,17 @@
 import argparse
 
+from os import environ
+
 from tenetdb.db import Database
 from tenetdb.populate import populate_all
 
+_username = environ.get('POSTGRES_USER')
+_password = environ.get('POSTGRES_PASSWORD')
+_database = environ.get('POSTGRES_DB')
 
-def main(dialect: str = 'postgresql', username: str = 'tenet', password: str = 'tenet123', host: str = 'localhost',
-         port: int = 5432, database: str = 'tenet', debug: bool = True):
+
+def main(dialect: str = 'postgresql', username: str = _username, password: str = _password, host: str = 'localhost',
+         port: int = 5432, database: str = _database, debug: bool = True):
     db = Database(dialect=dialect, username=username, password=password, host=host, port=port, database=database,
                   debug=debug)
 
