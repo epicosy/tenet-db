@@ -12,5 +12,5 @@ RUN git clone https://github.com/epicosy/tenet-db.git
 
 WORKDIR /opt/tenet-db
 RUN pip install .
-COPY init-db.sh ~/docker-entrypoint-initdb.d/
+COPY init-db.sh /docker-entrypoint-initdb.d/
 WORKDIR ~
