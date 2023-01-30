@@ -1,9 +1,5 @@
 FROM postgres:15.1
 
-ENV POSTGRES_USER $username
-ENV POSTGRES_PASSWORD $password
-ENV POSTGRES_DB $db
-
 RUN apt-get update && \
     apt-get install -y git python3-pip python3-dev libpq-dev
 
