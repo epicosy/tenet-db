@@ -12,9 +12,9 @@ _database = environ.get('POSTGRES_DB')
 
 def main(dialect: str = 'postgresql', username: str = _username, password: str = _password, host: str = 'localhost',
          port: int = 5432, database: str = _database, debug: bool = True):
+    print(username, password, database)
     db = Database(dialect=dialect, username=username, password=password, host=host, port=port, database=database,
                   debug=debug)
-
     print(f"Connected to {dialect}://{username}@{host}:{port}/{database}")
     populate_all(db)
 
