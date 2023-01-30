@@ -12,6 +12,5 @@ RUN git clone https://github.com/epicosy/tenet-db.git
 
 WORKDIR /opt/tenet-db
 RUN pip install .
+COPY init-db.sh ~/docker-entrypoint-initdb.d/
 WORKDIR ~
-
-CMD tenetdb --dialect postgresql --username $username --password $password --host localhost --database $db --port 5432
