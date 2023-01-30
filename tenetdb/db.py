@@ -19,7 +19,7 @@ class Database:
             try:
                 create_database(url=self.url, encoding='utf8')
             except TypeError as te:
-                raise TenetDBError(f"Could not create database @{host}:{port}/{database}. {te}")
+                raise TenetDBError(f"Could not create database @{host}:{port}/{database} for user {username}. {te}")
 
         self.engine = create_engine(self.url, echo=debug)
         Base.metadata.create_all(bind=self.engine)
