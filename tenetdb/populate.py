@@ -1,7 +1,7 @@
 import pandas as pd
 
-from db import Database
-from tables import Tag, Operation, Phase, Class, Abstraction, CWE, CWEOperation, CWEPhase, CWEClass
+from tenetdb.db import Database
+from tenetdb.tables import Tag, Operation, Phase, Class, Abstraction, CWE, CWEOperation, CWEPhase, CWEClass
 
 
 def populate_tags(database: Database):

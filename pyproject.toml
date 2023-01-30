@@ -52,4 +52,4 @@ include-package-data = true
 tenetdb = ["tables/*"]
 
 [project.scripts]
-tenetdb = "tenet_db.main:main"
+tenetdb = "tenetdb.main:main"

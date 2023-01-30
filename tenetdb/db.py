@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy_utils import create_database, database_exists
 
-from exc import TenetDBError
-from tables import *
+from tenetdb.exc import TenetDBError
+from tenetdb.tables import *
 
 
 class Database:

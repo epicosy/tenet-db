@@ -1,7 +1,7 @@
 import argparse
 
-from db import Database
-from populate import populate_all
+from tenetdb.db import Database
+from tenetdb.populate import populate_all
 
 
 def main(dialect: str = 'postgresql', username: str = 'tenet', password: str = 'tenet123', host: str = 'localhost',
